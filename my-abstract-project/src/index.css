@@ -1,0 +1,279 @@
+:root {
+    --purple: #4C5FD5;
+    --black: #000;
+    --white: #fff;
+    --bluered: #dadbf1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+        margin: 0;
+    padding: 0;
+}
+
+.header {
+    color: var(--white);
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 88px;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.step1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step1 span:nth-child(2) {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: 24px;
+}
+
+.help {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.material-symbols-outlined {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+
+.btn-outline {
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--white);
+    width: 220px;
+    padding: 0 25px;
+}
+
+.btn-inline {
+    background-color: var(--purple);
+    border: none;
+    color: var(--white);
+    width: 130px;
+    padding: 0 25px;
+    margin-left: 15px;
+}
+
+.line {
+    border-left: 2px solid #fff;
+    height: 32px;
+    margin: 0 5px
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+    font-family: inherit;
+}
+
+.header p,
+h1,
+h2 {
+    margin: 0;
+}
+
+.auth-group{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* input search */
+
+.search{
+    background: var(--bluered);
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.search h1{
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.search_input{
+    height: 55px;
+    border: none;
+    padding-left: 10px;  
+    outline: none;
+    flex-grow: 1;
+    background: transparent;
+}
+
+
+.search_logo{
+    border-radius: 4px;
+    border: 1px solid var(--black);
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    cursor: pointer;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* main sector*/
+
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-bottom: 60px;
+}
+
+main button{
+    border: none;
+    color: var(--purple);
+    background: transparent;
+}
+
+.with_logo{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.learn{
+    display: inline-flex;/* делаем так чтобы элементы были на одной оси*/
+    align-items: center;
+    gap: 1px;
+    color: var(--purple);
+}
+
+
+/* footer */
+
+footer{
+    line-height: 1.5;
+}
+
+.footer{
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    background-color: var(--black);
+    color: var(--white);
+    box-sizing: border-box;
+    padding-left: 100px;
+}
+
+.footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.ft_main{
+    display: grid;
+    padding: 20px 30px;
+    gap: 60px;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.a1{
+    padding: 10px;
+    min-width: 200px;
+}
+
+.a21{
+    line-height: 1.1;
+}
+
+
+.a12{
+    display: grid;
+    justify-content: flex-end;
+    padding-top: 100px;
+}
+
+.a2{
+  padding-top: 25px;
+}
+
+
+@media(max-width: 768px){
+    main{
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0;
+    }
+    .header{
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .search h1{
+        font-size: 40px;
+    }
+
+    .ft_main{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 30px 10px;
+    }
+    .footer{
+        padding-left: 10px;
+        height: auto;
+    }
+    .a1{
+        min-width: auto;
+        padding: 0;
+    }
+    footer{
+        font-size: 10px;
+    }
+
+    .a12{
+
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+
+    .a1 h2{
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+}
